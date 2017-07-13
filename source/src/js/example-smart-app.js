@@ -74,7 +74,8 @@
           ret.resolve(p);
         }); */
       } else {
-        onError();
+       // onError();
+	   alert("Error");
       }
     }
 
