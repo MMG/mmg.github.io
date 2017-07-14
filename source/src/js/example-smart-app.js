@@ -3,19 +3,16 @@
     var ret = $.Deferred();
 
     function onError() {
+
+      ///alert("Error:" + arguments);
       console.log('Loading error', arguments);
       ret.reject();
     }
 
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
-		  
-		  /*
         var patient = smart.patient;
         var pt = patient.read();
-		
-		
-		
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
@@ -72,10 +69,9 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
           ret.resolve(p);
-        }); */
+        });
       } else {
-       // onError();
-	   alert("Error");
+        onError();
       }
     }
 
